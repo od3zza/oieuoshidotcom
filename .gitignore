@@ -1,0 +1,6 @@
+Localizar e substituir em todos os arquivos
+> sed -i 's/search/replace/g' example.txt
+Ex: sed -i 's/\/atom\.xml/\/sitemap\.xml/g' *
+>> Substitui "/atom.xml" por "sitemap.xml" em todos os arquivos.
+
+> sed -i 's/byline/sub/g' example.txt
