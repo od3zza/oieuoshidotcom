@@ -1,0 +1,387 @@
+/* Fonts: Importa fontes do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+/* Variáveis Globais */
+html {
+  --spacing-xs: 8px; /* Espaçamento extra pequeno */
+  --spacing-s: 12px; /* Espaçamento pequeno */
+  --spacing: 16px; /* Espaçamento padrão */
+  --spacing-m: 16px; /* Espaçamento médio */
+  --spacing-l: 48px; /* Espaçamento grande */
+  --foreground: black; /* Cor do texto padrão */
+  --font-size: 20px; /* Tamanho da fonte padrão */
+  --font-size-s: 12px; /* Tamanho da fonte pequeno */
+  --font-size-m: 16px; /* Tamanho da fonte médio */
+  --font-size-l: 22px; /* Tamanho da fonte grande */
+  --font-size-xl: 30px; /* Tamanho da fonte extra grande */
+  --font-size-xxl: 36px; /* Tamanho da fonte ultra grande */
+  --red-light: #fecbca; /* Cor de destaque vermelha clara */
+  --red: #f83735; /* Cor de destaque vermelha */
+  --yellow: #fac832; /* Cor de destaque amarela */
+  --blue: #1231b5; /* Cor de destaque azul */
+  --blue-light: #84b4f9; /* Cor de destaque azul clara */
+  --content-width: 800px; /* Largura máxima do conteúdo */
+  scroll-behavior: smooth; /* Rolagem suave */
+}
+
+/* Estilos Gerais do Corpo */
+body {
+  -webkit-font-smoothing: antialiased; /* Suavização de fontes para WebKit */
+  text-rendering: optimizeLegibility; /* Melhoria da legibilidade do texto */
+  background: white; /* Cor de fundo */
+  color: var(--foreground); /* Cor do texto */
+  font-family: "Rubik", sans-serif; /* Fonte do corpo */
+  margin: auto;
+  padding: var(--spacing); /* Padding do corpo */
+}
+
+nav {
+  align-items: center; /* Centraliza horizontalmente */
+  text-align: center; /* Alinha textos dentro dos botões */
+}
+
+nav p {
+  text-align: center; /* Centraliza o texto dos <p> dentro do <nav> */
+  width: 100%; /* Garante que o texto ocupe toda a largura disponível */
+}
+
+/* Estilos de Parágrafo */
+p {
+  font-size: var(--font-size); /* Tamanho da fonte */
+  margin: 0 0 var(--spacing-s); /* Margens inferior */
+  line-height: 1.5; /* Altura da linha */
+  text-align: justify; /* Alinhamento do texto */
+  text-justify: inter-word; /* Justificação do texto */
+}
+
+/* Estilo de Seleção de Texto */
+::selection {
+  background: var(--red-light); /* Cor de fundo ao selecionar texto */
+}
+
+/* Estilos para iFrames */
+iframe {
+  max-width: 100%; /* Largura máxima */
+}
+
+/* Estilos de Links */
+a {
+  color: var(--foreground); /* Cor do texto do link */
+  font-family: "Rubik", sans-serif; /* Fonte dos links */
+  font-weight: bold; /* Peso da fonte */
+  font-style: none; /* Estilo da fonte */
+  font-size: var(--font-size); /* Tamanho da fonte */
+  line-height: 1.5; /* Altura da linha */
+}
+
+/* Estilo de Menu Blog */
+.menu span {
+  color: var(--foreground); /* Cor do texto do link */
+  font-family: "Rubik", sans-serif; /* Fonte dos links */
+  font-weight: bold; /* Peso da fonte */
+  font-style: none; /* Estilo da fonte */
+  font-size: var(--font-size); /* Tamanho da fonte */
+  line-height: 1.5; /* Altura da linha */
+}
+
+.menu span:hover {
+  text-decoration: underline; /* Comportamento igual ao link ao passar o mouse */
+}
+
+/* Estilo de Cabeçalhos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  line-height: 1.2; /* Altura da linha */
+}
+
+h1 {
+  font-family: "Rubik", sans-serif; /* Fonte do cabeçalho */
+  font-size: var(--font-size-xxl); /* Tamanho da fonte */
+  font-weight: 900; /* Peso da fonte */
+  margin: 0 10; /* Margens superior e inferior */
+}
+
+/* Estilo para Subtítulos */
+sub {
+  font-family: "Merriweather", serif; /* Fonte do subtítulo */
+  font-weight: normal; /* Peso da fonte */
+  font-size: var(--font-size-s); /* Tamanho da fonte */
+  color: #777777; /* Cor do texto */
+  text-transform: uppercase; /* Transformação do texto */
+  vertical-align: baseline; /* Ou use 'middle' para ajustar ao meio do texto */
+}
+
+/* Estilo da Linha Horizontal */
+hr {
+  background-color: var(--foreground); /* Cor de fundo */
+  margin: var(--spacing-m) auto; /* Margens automática */
+  width: 50%; /* Largura */
+  height: 2px; /* Altura */
+  max-width: 430px; /* Largura máxima */
+}
+
+/* Estilo para Listas Não Ordenadas */
+ul {
+  margin: 0; /* Margem */
+  padding: 0; /* Padding */
+}
+
+/* Estilos para Blockquote */
+blockquote {
+  font-size: var(--font-size-m); /* Tamanho da fonte */
+  line-height: 1.5; /* Altura da linha */
+  text-align: justify; /* Alinhamento do texto */
+  text-justify: inter-word; /* Justificação do texto */
+  margin: 20px 0 20px 0; /* Margens */
+  padding-left: 12%; /* Recuo à esquerda */
+  border-left: 0px solid var(--foreground); /* Opcional: Linha à esquerda */
+  color: var(--foreground); /* Cor do texto */
+}
+
+/* Container Principal */
+.container {
+  padding-top: var(--spacing-l); /* Padding superior */
+}
+
+/* Estilos para o Layout Principal e Conteúdo */
+.main {
+  max-width: var(--content-width); /* Largura máxima */
+  margin: auto; /* Margem automática */
+  padding: var(--spacing-m); /* Padding */
+}
+
+.content {
+  max-width: var(--content-width); /* Largura máxima */
+  padding: var(--spacing-m); /* Padding */
+  margin: auto; /* Margem automática */
+}
+
+/* Estilos Responsivos para o Sidebar */
+.sidebar {
+  font-family: "Rubik", sans-serif;
+  position: fixed; /* Torna o sidebar fixo para um posicionamento consistente */
+  top: 20px; /* Ajuste conforme a altura desejada */
+  left: 0; /* Sidebar à esquerda */
+  width: 150px;
+  text-align: center;
+  margin-bottom: var(--spacing-s);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 150px; /* Mantém a largura do sidebar no mobile */
+    position: fixed; /* Mantém o sidebar fixo no mobile */
+    left: 0; /* Alinha o sidebar à esquerda */
+    top: 20px; /* Mesma altura do botão */
+  }
+
+  .inner-switch {
+    right: 20px; /* Mantém o botão à direita no mobile */
+    top: 20px; /* Mesma altura que o sidebar */
+  }
+}
+
+/* Estilo dos Botões */
+button {
+  padding: 0.6em 2em; /* Padding interno */
+  width: 60%; /* Largura */
+  border: 3px solid var(--foreground); /* Borda */
+  border-radius: 6px; /* Bordas arredondadas */
+  background: transparent; /* Fundo transparente */
+  color: var(--foreground); /* Cor do texto */
+  font-family: "Rubik", sans-serif; /* Fonte */
+  font-weight: bold; /* Peso da fonte */
+  font-size: var(--font-size); /* Tamanho da fonte */
+  cursor: pointer; /* Cursor de ponteiro */
+  text-decoration: none; /* Remove decoração de texto */
+  position: relative; /* Posicionamento relativo */
+}
+
+/* Código */
+code {
+  background: #f1f2f3; /* Fundo do código */
+  outline: 1px solid #f2f3f4; /* Contorno */
+  font-family: SourceCodePro, Consolas, Menlo, Monaco, Courier New, monospace; /* Fontes de código */
+  color: #909090; /* Cor do texto */
+  font-size: 95%; /* Tamanho da fonte */
+  font-weight: bold; /* Peso da fonte */
+}
+
+pre {
+  background: #fafafa; /* Fundo */
+  outline: 1px solid #eeeeee; /* Contorno */
+  border-left: 5px solid #7be4d5; /* Borda lateral */
+  padding: 13px; /* Padding */
+  overflow-x: auto; /* Rolagem horizontal */
+  overflow-y: hidden; /* Sem rolagem vertical */
+}
+
+pre code {
+  background: transparent !important; /* Fundo transparente */
+  outline: none; /* Remove contorno */
+  color: black; /* Cor do texto */
+  font-weight: normal; /* Peso da fonte */
+}
+
+.content ul {
+  margin-left: 20px;
+  padding: 10px 0;
+}
+
+.content ul,
+.content ol {
+  font-size: var(--font-size); /* Tamanho da fonte */
+  line-height: 1.5; /* Altura da linha */
+  text-align: justify; /* Alinhamento do texto */
+  text-justify: inter-word; /* Justificação do texto */
+  margin: 20px 0; /* Margem superior e inferior */
+  padding-left: 10%; /* Recuo à esquerda do <ol> */
+  color: var(--foreground); /* Cor do texto */
+  list-style-position: inside; /* Ajusta a posição da numeração para dentro */
+}
+
+.content li {
+  padding-left: 10px; /* Distância entre o número e o texto */
+  margin: 8px 0; /* Espaçamento vertical entre os itens */
+  text-indent: -10px; /* Indenta o texto, ajustando o recuo */
+}
+
+/* Dark Mode */
+.dark {
+  background-color: #191919; /* Cor de fundo do modo escuro */
+  color: white; /* Cor do texto */
+}
+
+.dark a {
+  color: #ecb365; /* Cor dos links no modo escuro */
+}
+
+.dark hr {
+  background-color: #eeeeee; /* Cor da linha horizontal no modo escuro */
+}
+
+/* Ajuste para o menu no modo escuro */
+.dark .menu span {
+  color: #ecb365; /* Cor dos links no menu quando o modo escuro está ativo */
+}
+
+.dark .menu span:hover {
+  text-decoration: underline; /* Manter o comportamento de sublinhado */
+}
+
+/* Switch para Modo Escuro */
+.switch {
+  position: absolute; /* Posicionamento absoluto */
+  margin: auto; /* Margem automática */
+  top: 20px; /* Posição superior */
+  right: 30px;
+  text-align: center; /* Alinhamento do texto */
+}
+
+.inner-switch {
+  position: absolute;
+  top: 0; /* Alinha o botão ao topo do sidebar */
+  right: -40px; /* Posiciona o botão à direita do sidebar */
+  border: 0px solid #555555;
+  border-radius: 1.25rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+/* Estilos para Elementos Sociais */
+.social {
+  font-weight: normal; /* Peso da fonte */
+  text-align: left; /* Alinhamento do texto */
+  font-family: "Rubik", sans-serif; /* Fonte */
+  font-size: 14px; /* Tamanho da fonte */
+}
+
+/* Estilos Globais para Imagens */
+img {
+  padding: 0px;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* Estilos do Footer */
+.footer {
+  position: relative; /* Posicionamento relativo */
+  padding-top: 15px;
+  margin-top: 5px; /* Margem superior */
+  bottom: 30px; /* Distância do fundo */
+  height: 30px; /* Altura */
+  width: 100%; /* Largura total */
+  text-align: center; /* Alinhamento do texto */
+  text-transform: uppercase; /* Transformação do texto */
+  font-size: 13px; /* Tamanho da fonte */
+  line-height: 20px; /* Altura da linha */
+}
+
+/* Galeria || Gallery */
+#gallery {
+  line-height: 0;
+  transition: filter 2s;
+  -webkit-column-count: 4; /* split it into 5 columns */
+  -webkit-column-gap: 5px; /* give it a 5px gap between columns */
+  -moz-column-count: 4;
+  -moz-column-gap: 5px;
+  column-count: 4;
+  column-gap: 5px;
+}
+
+#gallery img {
+  width: 100% !important;
+  height: auto !important;
+  margin-bottom: 5px; /* to match column gap */
+}
+
+@media (max-width: 1200px) {
+  #gallery {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+
+@media (max-width: 1000px) {
+  #gallery {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (max-width: 800px) {
+  #gallery {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (max-width: 400px) {
+  #gallery {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
