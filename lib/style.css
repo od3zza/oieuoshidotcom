@@ -162,13 +162,12 @@ blockquote {
   padding: var(--spacing-m); /* Padding */
   margin: auto; /* Margem automática */
 }
-
-/* Estilos Responsivos para o Sidebar */
+/* Sidebar */
 .sidebar {
   font-family: "Rubik", sans-serif;
-  position: fixed; /* Torna o sidebar fixo para um posicionamento consistente */
-  top: 20px; /* Ajuste conforme a altura desejada */
-  left: 0; /* Sidebar à esquerda */
+  position: fixed;
+  top: 20px;
+  left: 0;
   width: 150px;
   text-align: center;
   margin-bottom: var(--spacing-s);
@@ -176,15 +175,14 @@ blockquote {
 
 @media (max-width: 768px) {
   .sidebar {
-    width: 150px; /* Mantém a largura do sidebar no mobile */
-    position: fixed; /* Mantém o sidebar fixo no mobile */
-    left: 0; /* Alinha o sidebar à esquerda */
-    top: 20px; /* Mesma altura do botão */
+    width: 150px;
+    left: 0;
+    top: 20px;
   }
 
   .inner-switch {
-    right: 20px; /* Mantém o botão à direita no mobile */
-    top: 20px; /* Mesma altura que o sidebar */
+    right: 20px;
+    top: 20px;
   }
 }
 
@@ -324,13 +322,13 @@ img {
 
 /* Estilos do Footer */
 .footer {
+  margin-top: 15px;
   position: relative; /* Posicionamento relativo */
   padding-top: 15px;
-  margin-top: 5px; /* Margem superior */
   bottom: 30px; /* Distância do fundo */
   height: 30px; /* Altura */
   width: 100%; /* Largura total */
-  text-align: center; /* Alinhamento do texto */
+  text-align: left; /* Alinhamento do texto */
   text-transform: uppercase; /* Transformação do texto */
   font-size: 13px; /* Tamanho da fonte */
   line-height: 20px; /* Altura da linha */
@@ -384,4 +382,65 @@ img {
     -webkit-column-count: 1;
     column-count: 1;
   }
+}
+
+/* Pop-up de anotações */
+
+/* Estilo para o pop-up */
+.popup {
+  display: none;
+  position: absolute;
+  background: #ffffff;
+  padding: 10px;
+  border: 3px solid #000000;
+  border-radius: 6px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  z-index: 10;
+  text-align: left;
+}
+
+.popup a {
+  font-size: 16px;
+}
+
+.popup .close {
+  cursor: pointer;
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  top: 0px;
+  right: 2px;
+}
+
+/* Estilo para a nota no texto */
+.note {
+  cursor: pointer;
+  color: black;
+  text-decoration: underline;
+  font-weight: bold; /* Adiciona negrito */
+}
+
+.note:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Estilo para a nota no rodapé */
+.footer-note {
+  font-size: 14px; /* Ajusta o tamanho da fonte do texto da nota */
+  margin-bottom: 10px;
+}
+
+/* Estilo para a nota no rodapé */
+.footer-note a {
+  font-size: 14px; /* Ajusta o tamanho da fonte do texto da nota */
+}
+
+/* Estilo para o número da nota no rodapé */
+.note-number {
+  font-size: 14px;
+  margin-right: 5px;
+  font-weight: bold; /* Torna o número em negrito */
 }
